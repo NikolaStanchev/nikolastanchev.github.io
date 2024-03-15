@@ -99,9 +99,9 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  /* background-color: var(--bs-body-bg); */
-  background-image: url('../assets/dotted_bg.png');
-  /* background-repeat: repeat; */
+  /* background-color: #dbd9d8; */
+  /* background-image: url('../assets/dotted_bg.png'); */
+  /* background-repeat:repeat; */
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -126,12 +126,12 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  /* font-size: calc(1.375rem + 1.5vw); */
   font-family: DM Serif Display;
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 5.5rem;
   }
 }
 
@@ -163,6 +163,153 @@ h3, .h3 {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.largeCard {
+  /* border-radius: 25px; */
+  margin-left: 5%;
+  margin-right: 5%;
+  /* width: 90%; */
+  height: 800px;
+  /* align-items: center; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  align-items: center;
+}
+
+.largeCardLeft {
+  border-radius: 25px;
+  margin-left: 5%;
+
+  margin-right: 15px;
+  width: 40%;
+  height: 800px;
+}
+
+.largeCardRight {
+  border-radius: 25px;
+  margin-left: 15px;
+  margin-right: 5%;
+  width: 60%;
+  height: 800px;
+}
+
+.btn-theme-orange {
+  background-color: #ED8032;
+}
+
+.hero-container {
+  display: flex;
+  /* flex-direction: col; */
+  /* align-items: center; */
+}
+
+
+/* Timeline Container */
+.timeline {
+  background: var(--primary-color);
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Card container */
+.card {
+  position: relative;
+  max-width: 600px;
+  border-width: 0 !important;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+.card:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+/* Global ::before */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid orangered;
+}
+
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+  left: 0px;
+  top: -5px;
+  bottom: 0px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+  right: 0;
+  top: -5px;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  color: gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Title of the card */
+.title {
+  color: orangered;
+  position: relative;
+}
+
+/* Timeline dot  */
+.title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid orangered;
+}
+
+/* text right if the card is even  */
+.card:nth-child(even) > .info > .title {
+  text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd) > .info > .title::before {
+  left: -45px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even) > .info > .title::before {
+  right: -45px;
 }
 
 h4, .h4 {
@@ -3815,13 +3962,13 @@ textarea.form-control-lg {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.bg-image {
+/* .bg-image {
   background-image: url('/assets/dotted_bg.png');
   color: rgb(107, 52, 161);
 
   width: 800px;
   height: 200px;
-}
+} */
 
 .navbar-nav {
   --bs-nav-link-padding-x: 0;
