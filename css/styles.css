@@ -140,7 +140,46 @@ body {
 }
 
 .hero {
+  max-width: 80%;
+  margin-left: 10%;
   height: 700px;
+}
+
+.flexBox-container {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  /* align-items: flex-end; */
+  max-width: 80%;
+  margin-left: 10%;
+  text-align: center;
+
+}
+
+.item-1 {
+  margin: 5px;
+  height: 100%;
+  width: 500px;
+  border-radius: 15px;
+}
+
+.item-2 {
+  margin: 5px;
+  height: 100%;
+  /* width: 500px; */
+  border-radius: 15px;
+  flex-grow: 1;
+}
+
+.projectContainer {
+  max-width: 80%;
+  margin-left: 10%;
+}
+
+.project {
+
+
 }
 
 .image {
@@ -173,11 +212,13 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
+  /* font-size: calc(1.325rem + 0.9vw); */
+  font-family: DM Sans;
+
 }
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 }
 
@@ -186,6 +227,8 @@ h3, .h3 {
 }
 @media (min-width: 1200px) {
   h3, .h3 {
+    font-family: DM Sans;
+
     font-size: 1.75rem;
   }
 }
@@ -382,6 +425,8 @@ h4, .h4 {
 }
 
 h5, .h5 {
+  font-family: DM Sans;
+
   font-size: 1.25rem;
 }
 
