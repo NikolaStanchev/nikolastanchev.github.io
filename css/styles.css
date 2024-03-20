@@ -151,30 +151,55 @@ body {
 }
 
 .flexBox-container {
-  height: 500px;
+  /* height: 500px;
   display: flex;
   flex-direction: row;
-  justify-content:space-evenly;
-  /* align-items: flex-end; */
+
+  gap: 20px; */
+  display: grid;
+  grid-template-rows: repeat(5, 100px);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
   max-width: 80%;
   margin-left: 10%;
   text-align: center;
+  justify-content: center;
+
+
 
 }
 
-.item-1 {
-  margin: 5px;
-  height: 100%;
-  /* width: 500px; */
+.item-3x3 {
+  grid-row: span 3;
+  grid-column: span 3;
+
+  margin: 10px;
   border-radius: 15px;
-  flex-grow: 0.75;
 }
 
-.item-2 {
-  margin: 5px;
+.item-2x3 {
+  /* grid-row: 2 / 4;
+  grid-column:   5 / 9; */
+  grid-row: span 2;
+  grid-column: span 3;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.item-3 {
+  /* grid-row: 1 / 2;
+  grid-column:   5 / 7; */
+  grid-row: span 4;
+  grid-column: span 3;
+  margin: 10px;
+  border-radius: 15px;
+
+}
+
+.bento-card {
+  background-color: #04414d;
+  width: 100%;
   height: 100%;
   border-radius: 15px;
-  flex-grow: 1;
 }
 
 .projectContainer {
@@ -188,6 +213,12 @@ body {
 
 }
 
+.logo-text {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
 
 
 .projectHeroImage {
