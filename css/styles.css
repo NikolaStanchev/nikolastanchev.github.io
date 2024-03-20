@@ -165,14 +165,14 @@ body {
 .item-1 {
   margin: 5px;
   height: 100%;
-  width: 500px;
+  /* width: 500px; */
   border-radius: 15px;
+  flex-grow: 0.75;
 }
 
 .item-2 {
   margin: 5px;
   height: 100%;
-  /* width: 500px; */
   border-radius: 15px;
   flex-grow: 1;
 }
@@ -917,6 +917,11 @@ progress {
   color: #6c757d;
 }
 
+.projectSection-container {
+  max-width: 80%;
+  margin-left: 10%;
+}
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -931,7 +936,7 @@ progress {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
-  filter: url(#noise);
+  /* filter: url(#noise); */
 }
 
 @media (min-width: 576px) {
