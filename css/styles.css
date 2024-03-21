@@ -361,6 +361,13 @@ h3, .h3 {
   /* align-items: center; */
 }
 
+.button-bordered {
+  border: 3px solid;
+  border-color: #000;
+  color: #000;
+  background-color: #DEDEDA;
+}
+
 
 /* Timeline Container */
 .timeline {
@@ -8407,7 +8414,9 @@ textarea.form-control-lg {
 /* rtl:end:remove */
 .text-primary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+  /* color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important; */
+  color: var(--bs-primary);
+
 }
 
 .text-secondary {
