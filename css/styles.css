@@ -368,6 +368,15 @@ h3, .h3 {
   background-color: #DEDEDA;
 }
 
+.image-portrait {
+  width: 90%;
+  border-radius: 5%;
+}
+
+.right {
+  float: right;
+}
+
 
 /* Timeline Container */
 .timeline {
@@ -502,6 +511,7 @@ h6, .h6 {
 }
 
 p {
+  font-family: DM Sans;
   margin-top: 0;
   margin-bottom: 1rem;
 }
